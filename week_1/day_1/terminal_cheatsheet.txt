@@ -1,0 +1,29 @@
+pwd - print working directory
+rm - for removing files
+    -fr force remove recursively
+touch - create file
+mv - for moving and renaming files
+    -r to move a folder
+cp - for copying files
+    -r to copy folder
+ls - to list all files in the directory
+    -a list all items
+    -l list details
+cd change directory
+    cd .. move up one directory
+    ~ go to home dorectory
+code . - open all files in directory in VS code
+cmd + k - to clear screen
+up arrow - shows previous commands
+history - list of previous commands
+
+
+
+## you can use different flags with every command
+## use man to get a manual of every command
+
+
+
+
+
+
