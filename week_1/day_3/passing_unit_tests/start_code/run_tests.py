@@ -1,7 +1,4 @@
-import unittest
-from tests.record_store_test import *
+from tests.python_functions_test import *
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
-
-    
