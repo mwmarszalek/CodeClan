@@ -65,3 +65,14 @@ def reverse_string(str):
 def fahrenheit_to_celsius(f):
     return (f-32) /1.8
 
+
+
+
+def manipulate(num):
+    num += 10
+    print(num)
+    num /= 2
+    print(num)
+
+manipulate(10)
+
