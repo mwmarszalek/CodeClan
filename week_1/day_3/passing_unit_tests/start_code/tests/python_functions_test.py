@@ -91,8 +91,7 @@ class TestPythonFunctionPractice(unittest.TestCase):
   def test_reverse_string(self):
     string_reversed = reverse_string("duck")
     self.assertEqual("kcud",string_reversed)
-    #add test code here
-    pass
+   
 
   #Given a value in farenheit, convert this into celsius.
  
