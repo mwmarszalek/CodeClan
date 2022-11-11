@@ -1,5 +1,6 @@
-from task_list import print_menu
-from output import print_task
+from task_list import *
+from output import *
+
 
 
 
