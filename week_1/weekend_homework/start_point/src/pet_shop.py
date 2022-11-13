@@ -79,9 +79,31 @@ def customer_can_afford_pet(customers,new_pet):
         return False
 
 
+def sell_pet_to_customer(pet_shop, pet, customer):
+     
+    #  if pet == "Arthur":
+    get_customer_pet_count(customer) == 1
 
-def sell_pet_to_customer(pet_shop,pet,customer):
+
+
+        
+
+        
+        
+
+        
+
 
     
+
+     
+
+    
+
+   
+
+    
+
+
 
     
