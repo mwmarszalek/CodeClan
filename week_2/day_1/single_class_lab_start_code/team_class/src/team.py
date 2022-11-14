@@ -16,6 +16,17 @@ class Team:
         return False
 
 
+
+
+
+
+    # def play_game(self,result):
+    #     if result:
+    #         #newparameter# += 3
+        
+
+
+
         
             
         

@@ -6,11 +6,11 @@ class TestTeam(unittest.TestCase):
         players = ["Derice Bannock", "Sanka Coffie", "Junior Bevil", "Yul Brenner"]
         self.team = Team("Cool Runnings", players, "Irv Blitzer")
 
-    @unittest.skip("delete this line to run the test")
+    #unittest.skip("delete this line to run the test")
     def test_team_has_name(self):
         self.assertEqual("Cool Runnings", self.team.name)
 
-    @unittest.skip("delete this line to run the test")
+    #@unittest.skip("delete this line to run the test")
     def test_team_has_players(self):
         self.assertEqual(4, len(self.team.players))
 
