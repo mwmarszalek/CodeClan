@@ -18,16 +18,16 @@ class TestCustomer(unittest.TestCase):
         self.customer.reduce_cash(500)
         self.assertEqual(500, self.customer.cash)
 
-    @unittest.skip("delete this line to run the test")
+    #@unittest.skip("delete this line to run the test")
     def test_pets_start_at_0(self):
         self.assertEqual(0, self.customer.pet_count())
 
-    @unittest.skip("delete this line to run the test")
+    #@unittest.skip("delete this line to run the test")
     def test_can_add_pet(self):
         self.customer.add_pet(self.pet)
         self.assertEqual(1, self.customer.pet_count())
 
-    @unittest.skip("delete this line to run the test")
+    #@unittest.skip("delete this line to run the test")
     def test_can_get_total_pet_cost(self):
         self.customer.add_pet(self.pet)
         self.customer.add_pet(self.pet)
