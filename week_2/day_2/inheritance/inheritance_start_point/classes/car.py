@@ -1,6 +1,8 @@
-class Car:
+from classes.vehicle import Vehicle
+
+class Car(Vehicle):
+    pass
     
-    def start_engine(self):
-        return "Vrrmmm"
+
     
     
