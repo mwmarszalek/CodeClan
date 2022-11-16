@@ -56,3 +56,5 @@ class TestPetShop(unittest.TestCase):
         self.assertEqual(1, self.pet_shop.pets_sold)
         self.assertEqual(1, self.pet_shop.stock_count())
         self.assertEqual(1, customer.pet_count())
+        
+        
