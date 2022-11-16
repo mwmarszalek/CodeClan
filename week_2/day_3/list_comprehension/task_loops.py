@@ -1,6 +1,6 @@
 ages = [5,15,64,27,84,26]
 
-odd_ages = [age for age in ages if age % 2 ==0]
+odd_ages = [age for age in ages if age % 2 == 1]
 
 print(odd_ages)
 
