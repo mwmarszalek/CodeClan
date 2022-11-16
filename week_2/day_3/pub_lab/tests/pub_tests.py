@@ -12,4 +12,10 @@ class TestPub(unittest.TestCase):
         self.assertEqual("The Prancing Pony",self.pub.name)
         
     
+    def test_increase_till(self):
+        self.pub.increase_till(2.50)
+        self.assertEqual(102.50,self.pub.till)
+        
+    
+    
     
