@@ -1,8 +1,8 @@
-def compare(num1,num2):
-    if num1 > num2:
-        return f"{num1} is greater than my number"
-    if num1 < num2:
-        return f"{num1} is less than my number"
-    if num1 == num2 :
-        return f"{num1} is equal to my number"
+def compare(user_number,computer_number):
+    if user_number > computer_number:
+        return f"{user_number} is greater than my number"
+    if user_number < computer_number:
+        return f"{user_number} is less than my number"
+    if user_number == computer_number :
+        return f"{user_number} is equal to my number"
     
