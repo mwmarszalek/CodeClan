@@ -7,11 +7,12 @@ from classes.room import Room
 class TestRoom(unittest.TestCase):
     
     def setUp(self):
-        self.room = Room()
+        self.room = Room(500)
         self.song = Song("Paint It Black")
-        self.guest1 = Guest("Daria")
-        self.guest2 = Guest("Eve")
-        self.guest3 = Guest("John")
+        self.guest1 = Guest("Daria",200)
+        self.guest2 = Guest("Eve",150)
+        self.guest3 = Guest("John",100)
+        self.fee = 20
         
     def test_add_guest_to_room(self):
         self.room.add_guest(self.guest1)
@@ -35,14 +36,15 @@ class TestRoom(unittest.TestCase):
         self.room.add_guest(self.guest3)
         self.assertEqual("You Shall Not Pass",self.room.max_capacity())
         
+    def test_paying_for_entry(self):
+        self.room.pay_for_entry(self.guest1,self.fee)
+        self.room.add_guest(self.guest1)
+        self.assertEqual(180,self.guest1.wallet)
+        self.assertEqual(520,self.room.till)
         
         
-    
         
         
-    # cant add a guest when its at capacity
-    
-    ## set capacity and insert 3 guests and try to insert 4
         
 
         

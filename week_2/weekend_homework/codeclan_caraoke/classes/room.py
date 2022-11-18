@@ -1,6 +1,7 @@
 class Room:
     
-    def __init__(self):
+    def __init__(self,till):
+        self.till = till
         self.guests = []
         self.songs = []
         
@@ -32,4 +33,9 @@ class Room:
             return "You Shall Not Pass"
         return None
     
-   
+    def pay_for_entry(self,guest,fee):
+        guest.wallet -= fee
+        self.till += fee
+        
+        
+    

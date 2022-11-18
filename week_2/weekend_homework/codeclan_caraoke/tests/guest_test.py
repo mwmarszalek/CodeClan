@@ -8,7 +8,7 @@ class TestGuest(unittest.TestCase):
     
     def setUp(self):
         
-        self.guest = Guest("Daria")
+        self.guest = Guest("Daria",150)
         
         
         
