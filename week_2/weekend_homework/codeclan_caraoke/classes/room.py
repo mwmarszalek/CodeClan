@@ -1,6 +1,6 @@
 class Room:
     
-    def __init__(self,till):
+    def __init__(self,till,guests,songs): # delete geusts songs parameters
         self.till = till
         self.guests = []
         self.songs = []
@@ -36,6 +36,8 @@ class Room:
     def pay_for_entry(self,guest,fee):
         guest.wallet -= fee
         self.till += fee
+        
+    
         
         
     

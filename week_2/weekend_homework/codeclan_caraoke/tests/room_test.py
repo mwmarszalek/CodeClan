@@ -7,11 +7,11 @@ from classes.room import Room
 class TestRoom(unittest.TestCase):
     
     def setUp(self):
-        self.room = Room(500)
+        self.room = Room(500,[],[])
         self.song = Song("Paint It Black")
-        self.guest1 = Guest("Daria",200)
-        self.guest2 = Guest("Eve",150)
-        self.guest3 = Guest("John",100)
+        self.guest1 = Guest("Daria",200,"Aisatana")
+        self.guest2 = Guest("Eve",150,"Vordhosbn")
+        self.guest3 = Guest("John",100,"Windowlicker")
         self.fee = 20
         
     def test_add_guest_to_room(self):
