@@ -2,12 +2,13 @@ import unittest
 from classes.song import Song
 from classes.guest import Guest
 from classes.room import Room
+from classes.bar_tab import Bar_tab
 
 
 class TestRoom(unittest.TestCase):
     
     def setUp(self):
-        self.room = Room(500,[],[])
+        self.room = Room(500)
         self.song = Song("Paint It Black")
         self.guest1 = Guest("Daria",200,"Aisatana")
         self.guest2 = Guest("Eve",150,"Vordhosbn")

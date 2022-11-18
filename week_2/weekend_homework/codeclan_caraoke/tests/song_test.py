@@ -2,7 +2,7 @@ import unittest
 from classes.song import Song
 from classes.guest import Guest
 from classes.room import Room
-
+from classes.bar_tab import Bar_tab
 
 class TestSong(unittest.TestCase):
     

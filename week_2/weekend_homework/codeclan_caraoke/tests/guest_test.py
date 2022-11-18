@@ -2,14 +2,14 @@ import unittest
 from classes.song import Song
 from classes.guest import Guest
 from classes.room import Room
-
+from classes.bar_tab import Bar_tab
 
 class TestGuest(unittest.TestCase):
     
     def setUp(self):
         
         self.guest = Guest("Daria",150,"Aisatana")
-        self.room = Room(500,[],"Aisatana")
+        self.room = Room(500)
         self.song = Song("Aisatana")
         
         
