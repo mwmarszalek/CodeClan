@@ -1,6 +1,6 @@
 class Room:
     
-    def __init__(self,till): # delete geusts songs parameters
+    def __init__(self,till): 
         self.till = till
         self.guests = []
         self.songs = []
