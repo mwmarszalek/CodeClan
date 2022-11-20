@@ -43,8 +43,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(180,self.guest1.wallet)
         self.assertEqual(520,self.room.till)
         
-        
-        
+
         
         
 

@@ -1,4 +1,4 @@
-from classes import room
+from classes.room import Room
 
 class Guest:
     
@@ -8,7 +8,10 @@ class Guest:
         self.fav_song = fav_song
         
     def check_fav_song(self,room):
+                
         for song in room:
             if song.song_name == self.fav_song:
                 return "Woohoo"
         return None
+    
+        

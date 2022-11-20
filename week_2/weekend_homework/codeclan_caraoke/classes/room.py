@@ -1,3 +1,5 @@
+
+
 class Room:
     
     def __init__(self,till): 
@@ -36,6 +38,10 @@ class Room:
     def pay_for_entry(self,guest,fee):
         guest.wallet -= fee
         self.till += fee
+        
+
+        
+    
         
     
         
