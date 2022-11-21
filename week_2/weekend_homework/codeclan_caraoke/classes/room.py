@@ -39,6 +39,11 @@ class Room:
         guest.wallet -= fee
         self.till += fee
         
+    # def free_spaces()
+        
+    # def check_in_guests(self):
+        
+        
 
         
     

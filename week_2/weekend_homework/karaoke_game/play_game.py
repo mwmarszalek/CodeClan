@@ -28,20 +28,7 @@ def assign_player_to_room(room_list):
     return chosen
     
     
-
-########################### Script ###############################
-
-player_name = input("Plase type in your name ")
-
-while True:
-
-    if check_if_player_recognised(list_of_players,player_name) == False:
-        break#jak wpisze zle imie to while loop sie przertwa
-    assigned_room = assign_player_to_room(room_list)
-    
-    print(f"{player_name} assigned to {assigned_room}")
-    
-    
+def assign_to_room(assigned_room):
     if assigned_room == "Room 1":
         room_1_guest_list.append(player_name)
         print(f"there are {len(room_1_guest_list)} player(s) currently in {assigned_room}. List of players: {room_1_guest_list}")
@@ -51,10 +38,30 @@ while True:
     if assigned_room == "Room 3":
         room_3_guest_list.append(player_name)
         print(f"there are {len(room_3_guest_list)} player(s) currently in {assigned_room}. List of players: {room_3_guest_list}")
+        
+        
+
+        
+
+
+########################### Script ###############################
+
+player_name = input("Plase type in your name ")
+
+while True:
+
+    if check_if_player_recognised(list_of_players,player_name) == False:
+        break
+    assigned_room = assign_player_to_room(room_list)
+    
+    print(f"{player_name} assigned to {assigned_room}")
+    
+    assign_to_room(assigned_room)
      
     chosen_song = input(f"Please choose one song from the list: {song_list} ")
     
     
+
     if chosen_song in song_list:
         print(f"let's start singing {chosen_song}! I hope you know the lyrics!")
         if chosen_song == "Coma Black":
