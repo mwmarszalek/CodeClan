@@ -4,15 +4,23 @@
 
 ul {
     list-style: none;
+    
 }
 
 body>header {
     padding: 1rem;
     background: dodgerblue;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
 }
 
 header>nav>ul {
     padding: 0;
+    display:flex;
+    justify-content: space-between;
+    gap: 1rem;
+    
 }
 
 body>main {
@@ -22,6 +30,9 @@ body>main {
 #author {
     padding: 1rem;
     border: 2px dashed #eee;
+    display:flex;
+    gap:1rem;
+
 }
 
 #author>img {
@@ -33,4 +44,7 @@ body>footer {
     background: dodgerblue;
 }
 
-#footer-container {}
+#footer-container {
+    display:flex;
+    gap:2rem;
+}

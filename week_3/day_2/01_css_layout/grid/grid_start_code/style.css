@@ -7,11 +7,13 @@ header {
   background-color: lightblue;
   color: #fff;
   text-align: center;
+  grid-area: header;
 }
 
 #menu {
   padding: 32px;
   background-color: #eee;
+  grid-area: menu;
 }
 
 nav {
@@ -23,6 +25,7 @@ nav {
 
 #main-content {
   padding: 32px;
+  grid-area: main;
 }
 
 footer {
@@ -31,8 +34,16 @@ footer {
   color: #fff;
   font-weight: bold;
   text-align: center;
+  grid-area: footer;
 }
 
 #grid-container {
+  display:grid;
+  grid-template-areas:
+    'header header'
+    'menu main'
+    'footer footer';
+  grid-template-columns: 3fr 7fr;
+
 
 }
