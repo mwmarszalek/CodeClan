@@ -28,7 +28,7 @@ def assign_player_to_room(room_list):
     return chosen
     
     
-def assign_to_room(assigned_room):
+def assign_to_room(assigned_room,player_name):
     if assigned_room == "Room 1":
         room_1_guest_list.append(player_name)
         print(f"there are {len(room_1_guest_list)} player(s) currently in {assigned_room}. List of players: {room_1_guest_list}")
@@ -41,7 +41,7 @@ def assign_to_room(assigned_room):
         
         
 
-        
+      
 
 
 ########################### Script ###############################
