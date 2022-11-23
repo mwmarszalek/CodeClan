@@ -1,15 +1,35 @@
-<html>
-    <head>
-        <title>{{ title }} - My To-Do List</title>
-    </head>
-    <body>
-        <h1>My Todo List!</h1>
-        {% for task in tasks %}  
-        <div>
-          <p>
-            {{ task.title }}: <b>{{ task.description }}</b>
-          </p>
-        </div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %} 
+
+{% block content %}
+
+<h1>My Todo List!</h1>
+
+<form action="/tasks" method="post">
+  <label for="title">Title</label>
+  <input type="text" name="title" id="title">
+  <label for="description">Description</label>
+  <textarea name="description" rows="2" cols="30" id="description"></textarea>
+  <input type="submit" value="Add Task">
+</form>
+
+
+
+
+{% for task in tasks %}
+  <div>
+    <p>
+        {{ task.title }}: <b>{{ task.description }}</b>
+
+        {% if task.done %}
+
+          <span> &#9989; </span>
+
+        {% else %}
+
+          <span> &#10060; </span>
+
+        {% endif %}
+     </p>
+  </div>
+    {% endfor %} 
+{% endblock %}
