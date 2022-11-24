@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>New Order</h2>
+    <form action="/orders" method="post">
+        <label for="pizza_name">Name</label>
+        <input type="text" name="pizza_name" id="pizza_name">
+        <label for="pizza_price">Price</label>
+        <input type="text" name="pizza_price" id="pizza_price">
+        <label for="gluten_free">Gluten_free?</label>
+        <input type="checkbox" name="gluten_free" id="gluten_free">
+        <label for="pizza_size">Size</label>
+        <select name="pizza_size" id="pizza_size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <input type="submit" value="Save Order">
+
+    </form>
+
+{% endblock  %}
