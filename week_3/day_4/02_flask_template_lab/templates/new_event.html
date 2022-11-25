@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <h2>Add New Event!</h2>
+    <form action="/events" method="post">
+        <label for="event_date">Date</label>
+        <input type="date" name="event_date" id="event_date">
+        <label for="event_name">Name</label>
+        <input type="text" name="event_name" id="event_name">
+        <label for="no_of_guests">No of Guests</label>
+        <input type="text" name="event_no_of_guests" id="event_no_of_guests">
+        <label for="location">Location</label>
+        <input type="text" name="event_location" id="event_location">
+        <label for="description">Description</label>
+        <input type="text" name="event_description" id="event_description">
+        <input type="submit" value="Save Event">
+
+    </form>
+
+{% endblock  %}

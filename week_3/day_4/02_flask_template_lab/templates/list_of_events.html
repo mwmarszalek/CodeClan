@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <h2>Event List</h2>
+
+    <ul>
+
+        {% for event in list_of_events %}
+            <li>
+                <h3>Date</h3>
+                <p>{{ event.date }}</p>
+                <a href="/events/{{loop.index0}}">View event</a>
+                <hr>
+                <h3>Name</h3>
+                <p>{{ event.name }}</p>
+                <hr>
+                <h3>No of Guests</h3>
+                <p>{{ event.no_of_guests }}</p>
+                <hr>
+                <h3>Location</h3>
+                <p>{{ event.location }}</p>
+                <hr>
+                <h3>Description</h3>
+                <p>{{ event.description }}</p>
+                <hr>
+                <h3>Recurring?</h3>
+                <p>
+                    {% if event.recurring %}
+                        <span> &#9989; </span>
+                    {% else %}
+
+                        <span> &#10060; </span>
+              
+                    {% endif %}
+                </p>
+                <hr>
+                <hr>
+                <hr>
+            </li>
+            
+        {% endfor %}
+
+    </ul>
+{% endblock %}

@@ -1,0 +1,40 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header, footer > section {
+    background-color: rgb(255, 174, 0);
+    display:flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 20px
+    
+}
+
+header > nav > ul {
+    
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+footer > section > nav> ul {
+
+    display:flex;
+    gap: 40px;
+    list-style: none;
+}
+
+main {
+    text-align: center;
+    background-color: whitesmoke
+    
+}
+
+main > ul {
+    list-style: none;
+}
+
+main > h2 {
+    text-align: center;
+}

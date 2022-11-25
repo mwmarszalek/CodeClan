@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Michal's Event Manager</title>
+</head>
+<body>
+    <header>
+        <h1>Event Manager by MM \m/</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/events">Events</a>
+                </li>
+                <li>
+                    <a href="/events/new">Add/Remove Events</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block main_content %}
+            
+        {% endblock %}
+    </main>
+
+    <footer>
+        <section>
+            <h2>\m/ O_O \m/</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/events">Events</a>
+                    </li>
+                    <li>
+                        <a href="/events/new">Add/Remove Events</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+
+</body>
+</html>
