@@ -1,0 +1,26 @@
+header,footer {
+    display:flex;
+    align-items: center;
+    
+    
+}
+
+header {
+    font-size: 30px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #553c9a, #b393d3);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+
+header > nav > ul  {
+    display: flex;
+    gap: 20px
+}
+
+footer > nav > ul {
+    display: flex;
+    gap: 20px
+}

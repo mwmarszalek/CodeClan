@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_content %}
+    <h2>Book's detailed info</h2>
+        <h3>Title</h3>
+        <p>{{ book.title }}</p>
+        <h3>Author</h3>
+        <p>{{ book.author }}</p>
+        <h3>Genre</h3>
+        <p>{{ book.genre }}</p>
+        <h3>Checked Out?</h3>
+        {% if book.checked_out %}
+            &#9989
+        {%else%}
+            &#10060
+        {% endif %}<br>
+        <form class="form-inline" action="/books" ,method="POST">
+            <input type="submit" value="Delete">
+        <hr>         
+
+
+
+
+        <hr> 
+{% endblock %}
