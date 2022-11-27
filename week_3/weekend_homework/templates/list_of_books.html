@@ -1,23 +1,38 @@
 {% extends 'base.html' %}
 
 {% block main_content %}
-    <h2>List of Available Books</h2>
+    
+        <h2 class="book_list_title">List of Available Books</h2>
+        <div class="library_wrapper"
+        <ul>
 
-    <ul>
+            {% for book in list_of_books %}
+            <div class="book">
+                <h3>Title</h3>
+                <p>{{ book.title }}</p>
+                <a href="/books/{{loop.index0}}">View book</a>
+            <div class="book">
+                <h3>Author</h3>
+                <p>{{ book.author }}</p>
+            <div class="book">
+                <h3>Genre</h3>
+                <p>{{ book.genre }}</p>
+            <div class="book">
+                <hr>
+                <form class="form-inline" action="/books/delete" method="POST">
+                    <label>Remove book by Index: </label>
+                    <input type="number" name="index" id="index">
+                    <input type="submit" value="Delete">
+                </form>
+                
+            </div>
+            </div>
+            </div>
+            </div>    
+            {% endfor %}
 
-        {% for book in list_of_books %}
-        <h3>Title</h3>
-        <p>{{ book.title }}</p>
-        <a href="/books/{{loop.index0}}">View book</a>
-        <h3>Author</h3>
-        <p>{{ book.author }}</p>
-        <h3>Genre</h3>
-        <p>{{ book.genre }}</p>
-       
-        <hr>
-        {% endfor %}
-
-    </ul>
+        </ul>
+    </div>
 
 
 

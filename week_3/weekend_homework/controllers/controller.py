@@ -34,11 +34,15 @@ def save_book():
     add_book(new_book)
     return render_template('list_of_books.html',list_of_books=list_of_books)
 
-@app.route('/books',methods=['POST'])
-def delete_book(book_index):
-    remove_book(book_index)
+@app.route('/books/delete', methods=['POST'])
+def delete_book():
+    book_index = int(request.form["index"])
+    book_to_remove = list_of_books[book_index]
+    remove_book(book_to_remove)
     
-    return render_template('list_of_books.html',list_of_books=list_of_books)
+    return redirect('/books')
+    
+
     
 
     

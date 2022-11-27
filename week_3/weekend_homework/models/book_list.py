@@ -14,6 +14,6 @@ def get_book(book_index):
 def add_book(new_book):
     list_of_books.append(new_book)
     
-def remove_book(book_index):
+def remove_book(book_to_remove):
 
-    list_of_books.pop(book_index)
+    list_of_books.remove(book_to_remove)
