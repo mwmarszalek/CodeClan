@@ -3,7 +3,7 @@ DROP TABLE characters;
 DROP TABLE lightsabers;
 
 CREATE TABLE characters(
-    id SERIAL,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     darkside BOOLEAN,
     age INT
@@ -11,9 +11,10 @@ CREATE TABLE characters(
 
 
 CREATE TABLE lightsabers(
-    id SERIAL,
-    colour VARCHAR(255),
-    hilt_metal  VARCHAR(255)
+    id SERIAL PRIMARY KEY,
+    colour VARCHAR(255) NOT NULL,
+    hilt_metal  VARCHAR(255) NOT NULL,
+    character_id INT REFERENCES characters(id)
 );
 
 
@@ -26,8 +27,9 @@ INSERT INTO characters (name,darkside) VALUES ('Yoda',false);
 INSERT INTO characters (name,darkside,age) VALUES ('Luke Skywalker',true,21);
 
 
-INSERT INTO lightsabers (colour,hilt_metal) VALUES ('green','palladium');
-INSERT INTO lightsabers (colour,hilt_metal) VALUES ('red','gold');
+INSERT INTO lightsabers (colour,hilt_metal,character_id) VALUES ('green','palladium',2);
+INSERT INTO lightsabers (colour,hilt_metal,character_id) VALUES ('red','gold',3);
+INSERT INTO lightsabers (colour,hilt_metal,character_id) VALUES ('red','copper',3);
 
 
 
@@ -60,9 +62,10 @@ INSERT into characters (name,darkside,age) VALUES ('Stormtrooper',true,25);
 
 UPDATE characters SET age = 29 WHERE id = 9;
 
-
 SELECT * FROM characters;
 SELECT * FROM lightsabers;
+SELECT * FROM lightsabers WHERE character_id = 3;
+
 
 
 
