@@ -21,3 +21,5 @@ album_repository.save(album2)
 # album_repository.delete_all()
 # artist_repository.delete_all()
 
+
+found = artist_repository.select_all()
