@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+    <p>{{ task.description }}</p>
+    <p>{{ task.user.first_name }}</p>
+    <p>{{ task.duration }}</p>
+    <p>Completed? {{ task.completed }}</p>
+    <a href="/tasks/{{ task.id }}/edit">Edit</a>
+    </div>
+    
+{% endblock content%}

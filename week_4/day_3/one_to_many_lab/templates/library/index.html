@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for book in all_books_key %}
+        <ul>
+            <li>{{ book.author.name }}</a></li>
+            <li><a href="/library/{{book.id}}">{{ book.title }}</a></li>
+            <li>{{ book.genre}}</li>
+            <li><form class="delete-form" action="/library/{{book.id}}/delete" method="post">
+                <button class="trash-button">
+                    <i class="fa fa-trash-o fa-3x" style="color:red"></i>
+                </button>
+            </form></li>
+        </ul>
+
+    {% endfor %}
+{% endblock content %}
+

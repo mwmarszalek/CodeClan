@@ -58,3 +58,6 @@ def update(album):
     sql = "UPDATE albums SET (title, artist_id, genre) = (%s, %s, %s) WHERE id = %s"
     values = [album.title, album.artist.id, album.genre, album.id]
     run_sql(sql, values)
+    
+    
+
