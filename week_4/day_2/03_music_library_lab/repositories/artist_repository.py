@@ -29,7 +29,7 @@ def select_all():
         artists.append(artist)
     return artists
 
-def select_id(id):
+def select(id):
     
     artist = None
     sql = "SELECT * FROM users where id = %s"

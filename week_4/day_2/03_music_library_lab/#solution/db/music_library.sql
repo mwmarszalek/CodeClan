@@ -1,6 +1,5 @@
-DROP TABLE IF EXISTS albums;
-DROP TABLE IF EXISTS artists;
-
+DROP TABLE albums;
+DROP TABLE artists;
 
 CREATE TABLE artists (
   id SERIAL PRIMARY KEY,
@@ -10,7 +9,6 @@ CREATE TABLE artists (
 CREATE TABLE albums (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
-  genre VARCHAR(255),
-  artist_id INT NOT NULL REFERENCES artists(id)
+  artist_id INT NOT NULL REFERENCES artists(id) ON DELETE CASCADE,
+  genre VARCHAR(255)
 );
-
