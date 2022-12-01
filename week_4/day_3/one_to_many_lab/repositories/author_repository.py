@@ -33,7 +33,7 @@ def select(id):
     return author
 
 def delete_all():
-    sql = "DELETE FROM users"
+    sql = "DELETE FROM authors"
     run_sql(sql)
 
 def delete(id):

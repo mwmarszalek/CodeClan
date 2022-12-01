@@ -28,14 +28,26 @@ def delete_book(book_id):
 
 #SHOW ADD BOOK PAGE (DISPLAY FORM)
 
-@book_blueprint.route('/library/new')
+@book_blueprint.route('/library/new',)
 def new_book():
     authors = author_repository.select_all()
-    return render_template('library/new.html')
+    return render_template('library/new.html', all_authors=authors)
 
-# SAVE ADDED BOOK
+#SAVE NEW BOOK (POST)
 
+# @book_blueprint.route('/library', methods=['POST'])
+# def create_book():
+#     title = request.form['title']
+#     genre = request.form['genre']
+#     author_id = request.form['author_id']
+    
+#     author = author_repository.select(author_id)
+#     book = Book(title,author,genre)
+#     book_repository.save(book)
+#     return redirect('/library')
+    
 
+    
 
 
 
