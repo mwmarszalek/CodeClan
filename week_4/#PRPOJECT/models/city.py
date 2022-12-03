@@ -5,5 +5,3 @@ class City:
         self.country = country
         self.visited = visited
         self.id = id
-        
-        
