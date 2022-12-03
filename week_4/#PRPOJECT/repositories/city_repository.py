@@ -5,8 +5,8 @@ import repositories.country_repository as country_repository
 
 
 def save(city):
-    sql = "INSERT INTO cities (name,country_id,visited) VALUES (%s,%s,%s) RETURNING *"
-    values = [city.name,city.country.id,city.visited]
+    sql = "INSERT INTO cities (name,visited,country_id) VALUES (%s,%s,%s) RETURNING *"
+    values = [city.name,city.visited,city.country.id]
     results = run_sql(sql,values)
     id = results[0]['id']
     city.id = id
@@ -49,5 +49,33 @@ def select(id):
     return city
 
 
+def update(city):
+    sql = "UPDATE cities SET (name,visited,country_id) = (%s, %s, %s) WHERE id = %s"
+    values = [city.name,city.visited,city.country.id,city.id]
+    print(values)
+    run_sql(sql, values)
+
+
+def see_visited():
+    cities_visited = []
+    sql = "SELECT * FROM cities WHERE visited = True"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(row['visited'])
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities_visited.append(city)
+    return cities_visited
+
+def see_to_visit():
+    cities_to_visit = []
+    sql = "SELECT * FROM cities WHERE visited = False"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(row['visited'])
+        city = City(row['name'], country, row['visited'], row['id'] )
+        cities_to_visit.append(city)
+    return cities_to_visit
 
 

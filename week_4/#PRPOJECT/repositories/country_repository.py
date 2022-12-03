@@ -31,7 +31,7 @@ def select_all():
     for row in results:
         country = Country(row['name'], row['visited'], row['id'] )
         countries.append(country)
-    return country
+    return countries
 
 
 def select(id):
@@ -50,7 +50,7 @@ def update(country):
     values = [country.name, country.visited, country.id]
     run_sql(sql, values)
     
-#SHOW CITIES BY COUNTRY    
+#SHOW CITIES    
 def cities(country):
     cities = []
 

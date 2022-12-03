@@ -11,11 +11,22 @@
     autofocus
   />
 
-  <label for="country">Country</label>
+  <div>
+    <label for="country">Country:</label>
+    <select id="country" name="country_id">
+      {% for country in all_countries %}
+        <option value="{{ country.id }}">{{ country.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- <label for="country">Country</label>
 
   <span style="color: red !important; display: inline; float: none">*</span>
 
   <select id="country" name="country_id" class="form-control">
+
+   
     <option value="Afghanistan">Afghanistan</option>
     <option value="Åland Islands">Åland Islands</option>
     <option value="Albania">Albania</option>
@@ -290,11 +301,11 @@
     <option value="Yemen">Yemen</option>
     <option value="Zambia">Zambia</option>
     <option value="Zimbabwe">Zimbabwe</option>
-  </select>
+  </select> -->
 
   <label for="visited">Visited:</label>
   <select id="visited" name="visited">
-    <option value="true">Yes!</option>
+    <option value="true">Yes Sir!</option>
     <option value="false">Not Yet!</option>
   </select>
 

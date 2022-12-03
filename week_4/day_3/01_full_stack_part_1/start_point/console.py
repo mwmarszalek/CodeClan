@@ -20,5 +20,3 @@ task_repository.save(task_1)
 task_2 = Task("Go for a run", user1, 30, True)
 task_repository.save(task_2)
 
-# Uncomment the line below to inspect the variables above in the debugger!
-# breakpoint()

@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 
 from models.author import Author
 from repositories import book_repository
+from repositories import author_repository
 
 def save(author):
     sql = "INSERT INTO authors (name) VALUES (%s) RETURNING *"
