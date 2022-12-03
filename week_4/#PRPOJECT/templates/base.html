@@ -11,7 +11,7 @@
 <body>
   <header>
     <nav>
-      <ul class="menu">
+      <ul class="menu_cities">
         <li><a href="/">Home</a></li>
         <li><a href="/cities">Cities</a></li>
         <li>
@@ -25,7 +25,21 @@
         </li>
       </ul>
     </nav>
+    <nav>
+      <ul class="menu_countries">
+        <li><a href="/countries">Countries</a></li>
+        <li>
+          <a href="/countries/visited">See Countries Visited</a>
+        </li>
+        <li>
+          <a href="/countries/to_visit">Countries Still To Visit</a>
+        </li>
+      </ul>
+    </nav>
+
   </header>
+
+ 
   <div class="container">
     {% block content %}
     {% endblock %}

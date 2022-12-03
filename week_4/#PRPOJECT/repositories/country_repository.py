@@ -63,3 +63,12 @@ def cities(country):
         cities.append(city)
     return cities
     
+def see_visited():
+    countries_visited = []
+    sql = "SELECT * FROM countries WHERE visited = True"
+    results = run_sql(sql)
+
+    for row in results:
+        country = Country(row['name'], row['visited'], row['id'] )
+        countries_visited.append(country)
+    return countries_visited

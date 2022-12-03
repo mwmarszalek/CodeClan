@@ -45,7 +45,7 @@ def edit_city(city_id):
     countries = country_repository.select_all()
     return render_template('cities/edit.html', all_countries=countries, city=city)
 
-# saves update form
+# saves update form (city)
 @cities_blueprint.route("/cities/<id>", methods=['POST'])
 def update_city(id):
     name   = request.form['name']
@@ -57,7 +57,7 @@ def update_city(id):
     return redirect('/cities')
 
 
-# delete city
+# delete city !!!! DOESNT WORK - WHEN DELETING CITY COUNTRY STAYS!!!
 
 @cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
 def delete_city(id):

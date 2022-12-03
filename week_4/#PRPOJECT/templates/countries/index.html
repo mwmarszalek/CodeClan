@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for country in all_countries %}
+      
+    <a href="/countries/{{country.id}}">{{country.name}}</a>
+    {{country.visited}}
+    <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    </form>
+
+{% endfor %}
+
+{% endblock %}

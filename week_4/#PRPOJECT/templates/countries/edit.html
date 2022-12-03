@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/countries/{{country.id}}" method="post">
+        <div>
+            <label for="name">Country Name:</label>
+            <input type="text" id="name" value="{{country.name}}" name="name">
+        </div>
+        <div>
+            <label for="visited">Visited:</label>
+            <select id="visited" name="visited">
+                <option value="true"
+                {% if country.visited %} selected="selected" {% endif %} >Visited</option>
+                <option value="false"
+                {% if country.visited == False %} selected="selected" {% endif %}>Not Yet!</option>
+            </select>
+        </div>
+        
+        <button type="submit">Save City</button>
+    </form>
+{% endblock content %}

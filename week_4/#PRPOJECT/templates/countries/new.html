@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
 
-<form action="/cities" method="post">
-  <label for="name">City Name:</label>
+<form action="/countries" method="post">
+  <label for="name">Country Name:</label>
   <input
     type="text"
     id="name"
@@ -10,16 +10,6 @@
     required
     autofocus
   />
-
-  <div>
-    <label for="country">Country:</label>
-    <select id="country" name="country_id">
-      {% for country in all_countries %}
-        <option value="{{ country.id }}">{{ country.name }}</option>
-      {% endfor %}
-    </select>
-  </div>
-
 
 
   <label for="visited">Visited:</label>
