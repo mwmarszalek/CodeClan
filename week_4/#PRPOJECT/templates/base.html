@@ -6,17 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <title>My Task List</title>
+  <title>Earth Trekker</title>
 </head>
 <body>
+  
   <header>
-    <nav>
-      <ul class="menu_cities">
+    <nav class="header-wrapper">
+      <ul class="home-cities-add-city">
+        <h1>Earth Trekker</h1>
         <li><a href="/">Home</a></li>
         <li><a href="/cities">Cities</a></li>
         <li>
           <a href="/cities/new">Add City</a>
         </li>
+      </ul>
+      <!-- <ul class ="see-visited-to-visit">
         <li>
           <a href="/cities/visited">See Cities Visited</a>
         </li>
@@ -24,8 +28,8 @@
           <a href="/cities/to_visit">Still To Visit</a>
         </li>
       </ul>
-    </nav>
-    <nav>
+    </nav> -->
+    <!-- <nav>
       <ul class="menu_countries">
         <li><a href="/countries">Countries</a></li>
         <li>
@@ -35,14 +39,16 @@
           <a href="/countries/to_visit">Countries Still To Visit</a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
   </header>
 
  
-  <div class="container">
+    <div class="content">
     {% block content %}
     {% endblock %}
   </div>
+<footer><h4>Copyright 2022 Michal Marszalek ®</h4></footer>
+
 </body>
 </html>

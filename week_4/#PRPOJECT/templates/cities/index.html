@@ -3,14 +3,27 @@
 
 
 {% for city in all_cities %}
-      
-    <a href="/cities/{{city.id}}">{{city.name}}</a>
-    {{city.country.name}}
-    {{city.visited}}
-    <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-    </form>
+  
+<table>
+    <tr>
+      <th>City</th>
+      <th>Country</th>
+      <th>Visited</th>
+      <th>Delete?</th>
+    </tr>
+    <tr>
+      <td><a href="/cities/{{city.id}}">{{city.name}}</a></td>
+      <td>{{city.country.name}}</td>
+      <td> {% if city.visited %}
+        <i class="fa fa-check fa-2x" style="color: green"></i>
+    {% else %}
+        <i class="fa fa-times fa-2x"></i>
+    {% endif %}</td>
+        <td class="delete-icon"><form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
+            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:rgb(255, 89, 0)" aria-hidden="true"></i></button></td>
+    </tr>
+  </table>
 
-{% endfor %}
+  {% endfor %}
 
 {% endblock %}
