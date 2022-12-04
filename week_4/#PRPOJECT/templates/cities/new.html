@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% block content %}
-
-<form action="/cities" method="post">
-  <label for="name">City Name:</label>
+<h1 class="add-city-title">Add New City:</h1>
+<form action="/cities" method="post" class="form-new">
+  <label for="name">City Name:&nbsp</label>
   <input
     type="text"
     id="name"
@@ -12,7 +12,7 @@
   />
 
   <div>
-    <label for="country">Country:</label>
+    <label for="country">Country:&nbsp</label>
     <select id="country" name="country_id">
       {% for country in all_countries %}
         <option value="{{ country.id }}">{{ country.name }}</option>
@@ -22,13 +22,13 @@
 
 
 
-  <label for="visited">Visited:</label>
+  <label for="visited">Visited:&nbsp</label>
   <select id="visited" name="visited">
     <option value="true">Yes Sir!</option>
     <option value="false">Not Yet!</option>
   </select>
 
-  <button type="submit">Add City</button>
+  <button type="submit" class="save-edit-btn">Add City</button>
 </form>
 
 {% endblock %}

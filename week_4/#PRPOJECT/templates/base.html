@@ -9,7 +9,7 @@
   <title>Earth Trekker</title>
 </head>
 <body>
-  
+
   <header>
     <nav class="header-wrapper">
       <ul class="home-cities-add-city">
@@ -20,35 +20,27 @@
           <a href="/cities/new">Add City</a>
         </li>
       </ul>
-      <!-- <ul class ="see-visited-to-visit">
-        <li>
-          <a href="/cities/visited">See Cities Visited</a>
-        </li>
-        <li>
-          <a href="/cities/to_visit">Still To Visit</a>
-        </li>
-      </ul>
-    </nav> -->
-    <!-- <nav>
-      <ul class="menu_countries">
-        <li><a href="/countries">Countries</a></li>
-        <li>
-          <a href="/countries/visited">See Countries Visited</a>
-        </li>
-        <li>
-          <a href="/countries/to_visit">Countries Still To Visit</a>
-        </li>
-      </ul>
-    </nav> -->
-
+      <ul class="visited">
+      <li>
+        <a href="/cities/visited">See Cities Visited</a>
+      </li>
+      <li>
+        <a href="/cities/to_visit">Still To Visit</a>
+      </li>
+    </ul>
+  </nav>
   </header>
-
- 
     <div class="content">
     {% block content %}
     {% endblock %}
   </div>
-<footer><h4>Copyright 2022 Michal Marszalek ®</h4></footer>
+  <footer><h4>Copyright ® 2022 Michal Marszalek </h4>
+
+
+  </footer>
 
 </body>
 </html>
+
+<!-- <img src="{{ url_for('static', filename='background.jpeg') }}" alt="image alt text" />  -->
+ 

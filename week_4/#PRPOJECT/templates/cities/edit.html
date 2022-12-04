@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="/cities/{{city.id}}" method="post">
+    <h1 class="edit-title">Edit:</h1>
+    <form action="/cities/{{city.id}}" method="post" class="form-edit">
         <div>
-            <label for="name">City Name:</label>
+            <label for="name">City Name:&nbsp</label>
             <input type="text" id="name" value="{{city.name}}" name="name">
         </div>
   
         <div>
-            <label for="country">Country</label>
+            <label for="country">Country:&nbsp</label>
             <select id="country" name="country_id">
                 {% for country in all_countries %}
                     <option value="{{country.id}}"
@@ -17,7 +18,7 @@
             </select>
         </div>
         <div>
-            <label for="visited">Visited:</label>
+            <label for="visited">Visited:&nbsp</label>
             <select id="visited" name="visited">
                 <option value="true"
                 {% if city.visited %} selected="selected" {% endif %} >Visited</option>
@@ -26,6 +27,6 @@
             </select>
         </div>
         
-        <button type="submit">Save City</button>
+        <button type="submit" class="save-edit-btn">Save</button>
     </form>
 {% endblock content %}
