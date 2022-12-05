@@ -68,3 +68,9 @@ def delete_country(id):
 def see_visited():
     countries = country_repository.see_visited()
     return render_template("cities/visited.html", all_countries = countries)
+
+
+@countries_blueprint.route('/countries/to_visit')
+def see_to_visit():
+    countries = country_repository.see_to_visit()
+    return render_template("cities/to_visit.html", all_countries = countries)

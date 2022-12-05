@@ -72,3 +72,13 @@ def see_visited():
         country = Country(row['name'], row['visited'], row['id'] )
         countries_visited.append(country)
     return countries_visited
+
+def see_to_visit():
+    countries_to_visit = []
+    sql = "SELECT * FROM countries WHERE visited = False"
+    results = run_sql(sql)
+
+    for row in results:
+        country = Country(row['name'], row['visited'], row['id'] )
+        countries_to_visit.append(country)
+    return countries_to_visit

@@ -62,7 +62,7 @@ def see_visited():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(row['visited'])
+        country = country_repository.select(row['id'])
         city = City(row['name'], country, row['visited'], row['id'] )
         cities_visited.append(city)
     return cities_visited
@@ -73,7 +73,7 @@ def see_to_visit():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(row['visited'])
+        country = country_repository.select(row['id'])
         city = City(row['name'], country, row['visited'], row['id'] )
         cities_to_visit.append(city)
     return cities_to_visit
