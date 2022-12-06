@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<form action="/countries/add/new" method="post">
+<form action="/countries/add/new" method="post" class="form-new">
   <label for="name">Country Name:</label>
   <input
     type="text"
@@ -11,7 +11,7 @@
     autofocus
   />
 
-  <button type="submit">Add New Country</button>
+  <button type="submit" class="save-edit-btn">Add New Country</button>
 </form>
 
 {% endblock %}

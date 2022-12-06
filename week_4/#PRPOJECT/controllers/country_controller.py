@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.country import Country
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
+import pdb
 
 
 countries_blueprint = Blueprint("countries", __name__)
@@ -11,6 +12,7 @@ countries_blueprint = Blueprint("countries", __name__)
 @countries_blueprint.route("/countries")
 def countries():
     countries = country_repository.select_all()
+    # pdb.set_trace()
     return render_template("countries/index.html", all_countries = countries)
 
 
@@ -59,7 +61,7 @@ def update_country(id):
 
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_country(id):
-    country_repository.delete(id)
+    country_repository.delete(int(id))
     return redirect('/countries')
 
 # display countries visited

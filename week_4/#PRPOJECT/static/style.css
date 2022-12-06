@@ -112,7 +112,7 @@ footer {
 
 
 
-.show-one,.edit-title,.add-city-title {
+.show-one,.edit-title,.add-city-title,.to-visit-title,.visited-title {
     text-align: center;
     text-shadow: 2px 2px black;
     color:white;
@@ -162,7 +162,7 @@ input[type=text] {
     background-color: rgb(255, 166, 0);
     font-weight: bold;
     border-radius: 30%;
-    width:70px;
+    width:100px;
     
     
 }
@@ -170,6 +170,9 @@ input[type=text] {
 .save-edit-btn:hover {
     cursor: pointer;
 }
+
+
+
 
 .trash-button:hover {
     cursor: pointer;
@@ -182,4 +185,21 @@ input[type=text] {
 
 .add-new-country-btn {
     font-size:30px;
+}
+
+.countries {
+    margin-left: 40px;
+}
+
+.add-ctr-desc {
+    
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   margin-left: 100px;
+}
+
+#if-ctry-not-added {
+    margin-top:0px;
+    margin-bottom:0;
 }
