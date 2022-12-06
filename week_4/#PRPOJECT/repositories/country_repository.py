@@ -72,3 +72,13 @@ def see_visited():
         country = Country(row['name'], row['visited'], row['id'] )
         countries_visited.append(country)
     return countries_visited
+
+
+    
+def add_country(country):
+    sql = "INSERT INTO countries (name) VALUES (%s) RETURNING *"
+    values = [country.name]
+    results = run_sql(sql,values)
+    id = results[0]['id']
+    country.id = id
+    return country

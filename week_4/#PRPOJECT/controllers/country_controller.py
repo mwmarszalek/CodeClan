@@ -55,16 +55,36 @@ def update_country(id):
     country_repository.update(country)
     return redirect('/countries')
 
-# delete country !!!DOESNT WORK - WHEN COUNTRY DELETED - CITY STAYS!!!!!
+# delete country 
 
 @countries_blueprint.route("/countries/<id>/delete", methods=['POST'])
 def delete_country(id):
     country_repository.delete(id)
     return redirect('/countries')
 
-# !!!!!DOESNT WORK - not displaying anything!!!!display countries visited
+# display countries visited
 
 @countries_blueprint.route('/countries/visited')
 def see_visited():
     countries = country_repository.see_visited()
     return render_template("cities/visited.html", all_countries = countries)
+
+
+# display add country page
+
+@countries_blueprint.route('/countries/add/new')
+def display_add_new_country():
+    return render_template("countries/new.html")
+
+
+# add country using button on add city
+
+@countries_blueprint.route('/countries/add/new', methods = ['POST'])
+def add_new_country():
+    name = request.form['country_name']
+    country = Country(name)
+    country_repository.add_country(country)
+    
+    return redirect('/cities/new')
+
+

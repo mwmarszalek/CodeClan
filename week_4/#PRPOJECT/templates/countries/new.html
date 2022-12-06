@@ -1,24 +1,17 @@
 {% extends "base.html" %} {% block content %}
 
-<form action="/countries" method="post">
+<form action="/countries/add/new" method="post">
   <label for="name">Country Name:</label>
   <input
     type="text"
-    id="name"
-    name="name"
+    id="country_name"
+    name="country_name"
     placeholder="Name"
     required
     autofocus
   />
 
-
-  <label for="visited">Visited:</label>
-  <select id="visited" name="visited">
-    <option value="true">Yes Sir!</option>
-    <option value="false">Not Yet!</option>
-  </select>
-
-  <button type="submit">Add City</button>
+  <button type="submit">Add New Country</button>
 </form>
 
 {% endblock %}

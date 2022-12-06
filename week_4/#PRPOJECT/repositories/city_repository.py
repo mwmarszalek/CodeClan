@@ -79,6 +79,12 @@ def see_to_visit():
     return cities_to_visit
 
 
+def update_visited(is_visited,city_id):
+    sql = "UPDATE cities SET visited = %s WHERE id = %s"
+    values = [is_visited,city_id]
+    run_sql(sql, values)
+
+
 
     
 

@@ -57,8 +57,7 @@ def update_city(id):
     return redirect('/cities')
 
 
-# delete city !!!! DOESNT WORK - WHEN DELETING CITY COUNTRY STAYS!!!
-
+# delete city 
 @cities_blueprint.route("/cities/<id>/delete", methods=['POST'])
 def delete_city(id):
     city_repository.delete(id)
@@ -78,3 +77,13 @@ def see_visited():
 def see_to_visit():
     cities = city_repository.see_to_visit()
     return render_template("cities/to_visit.html", all_cities = cities)
+
+
+# mark city as visited
+
+@cities_blueprint.route('/cities/<city_id>/mark_visited', methods=['POST'])
+def mark_as_visited(city_id):
+    city_repository.update_visited(True,city_id)
+    
+    return redirect('/cities/to_visit')
+    

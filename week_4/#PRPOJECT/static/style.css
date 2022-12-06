@@ -171,6 +171,15 @@ input[type=text] {
     cursor: pointer;
 }
 
+.trash-button:hover {
+    cursor: pointer;
+}
+
+.mark-complete {
+    background-color: rgb(300, 176, 0);
+}
 
 
-
+.add-new-country-btn {
+    font-size:30px;
+}

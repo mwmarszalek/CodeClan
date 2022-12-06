@@ -12,7 +12,7 @@
       <th>City</th>
       <th>Country</th>
       <th>Visited</th>
-      <th>Delete?</th>
+      <th>Change to Visited</th>
     </tr>
     <tr>
       <td><a href="/cities/{{city.id}}">{{city.name}}</a></td>
@@ -22,18 +22,11 @@
     {% else %}
         <i class="fa fa-times fa-2x"></i>
     {% endif %}</td>
-        <td class="delete-icon"><form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
-            <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button></td>
+        <td class="delete-icon"><form class="delete-form" action="/cities/{{city.id}}/mark_visited" method="POST">
+            <button class="trash-button mark-complete"><i class="fa fa-book fa-3x" style="color:green" aria-hidden="true"></i></button></td>
     </tr>
   </table>
       
-    <!-- <a href="/cities/{{city.id}}">{{city.name}}</a>
-    {{city.country.name}}
-   
-    <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
-    </form> -->
-
 {% endfor %}
 
 {% endblock %}
