@@ -53,40 +53,40 @@ country_repository.save(country12)
 
 
 # ADD NEW CITIES TO DB
-city1 = City("Iquitos",country3,False)
+city1 = City("Moscow",country1,False)
 city_repository.save(city1)
 
-city2 = City("Lima",country3,True)
+city2 = City("Warsaw",country2,True)
 city_repository.save(city2)
 
-city3 = City("Warsaw",country2,True)
+city3 = City("Madrid",country3,True)
 city_repository.save(city3)
 
-city4 = City("Gdansk",country2,True)
+city4 = City("Oslo",country4,True)
 city_repository.save(city4)
 
-city5 = City("Las Palmas",country3,False)
+city5 = City("Cancun",country5,False)
 city_repository.save(city5)
 
-city6 = City("Moscow",country1,True)
+city6 = City("Bangkok",country6,True)
 city_repository.save(city6)
 
 city7 = City("Manila",country7,False)
 city_repository.save(city7)
 
 city8 = City("Cape Town",country8,True)
-city_repository.save(city2)
+city_repository.save(city8)
 
 city9 = City("Saigon",country9,True)
-city_repository.save(city3)
+city_repository.save(city9)
 
 city10 = City("Beijing",country10,True)
-city_repository.save(city4)
+city_repository.save(city10)
 
 city11 = City("Washington DC",country11,False)
-city_repository.save(city5)
+city_repository.save(city11)
 
 city12 = City("Kinshasa",country12,True)
-city_repository.save(city6)
+city_repository.save(city12)
 
 
