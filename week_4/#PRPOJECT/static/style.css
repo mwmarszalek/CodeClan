@@ -1,22 +1,23 @@
 body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: linear-gradient(to right,brown,rgba(255, 200, 0, 0.78));
-    /* background-image: url('background.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover; */
+
+    
 }
 
 .homepage-title {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     font-size: 80px;
-    height:400px;
     color:black;
     opacity:0.8;
+    margin-bottom: 100px;
+    
     
 }
+
+
 
 .header-wrapper {
     display: flex;
@@ -25,10 +26,18 @@ body {
     font-size: larger;
     background-image: linear-gradient(to right,rgb(165, 42, 42),rgba(255, 200, 0, 0.78));
     border-style: groove;
+    border-color: rgb(255, 207, 155);
     border-width: 8px;
     margin-bottom: 30px;
-   
+
 }
+
+/* header {
+    position:sticky;
+    top:0;
+    z-index:100;
+    transition: 0.2;
+} */
 
 .visited-wrapper {
     display:flex;
@@ -42,11 +51,12 @@ body {
     gap:50px;
     list-style-type: none;
     margin-right: 30px;
+    font-size: 18px;
     
 }
 
 .visited1 {
-    gap:90px;
+    gap:100px;
 }
 
 
@@ -110,19 +120,26 @@ table,th,td {
     padding:10px;
     text-align: center;
     box-shadow: 5px 3px;
+    
 
 }
 
 th {
     width: 150px;
+   
+}
+
+table:hover {
+    background-color: rgb(255, 207, 155);
 }
 
 
 footer {
     text-align: center;
-    margin-top:250px;
     font-size:14px;
     font-family: 'Courier New', Courier, monospace;
+    color:white;
+    opacity:0.5;
 }
 
 
@@ -216,4 +233,11 @@ input[type=text] {
 #if-ctry-not-added {
     margin-top:0px;
     margin-bottom:0;
+}
+
+.globe-icons {
+    padding:30px;
+    opacity:0.7;
+    text-align: center;
+   
 }
