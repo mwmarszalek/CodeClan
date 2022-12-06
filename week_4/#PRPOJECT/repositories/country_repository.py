@@ -63,15 +63,7 @@ def cities(country):
         cities.append(city)
     return cities
     
-def see_visited():
-    countries_visited = []
-    sql = "SELECT * FROM countries WHERE visited = True"
-    results = run_sql(sql)
 
-    for row in results:
-        country = Country(row['name'], row['visited'], row['id'] )
-        countries_visited.append(country)
-    return countries_visited
 
 
     
@@ -82,3 +74,31 @@ def add_country(country):
     id = results[0]['id']
     country.id = id
     return country
+
+
+def see_visited_country():
+    countries_visited = []
+    sql = "SELECT * FROM countries WHERE visited = True"
+    results = run_sql(sql)
+
+    for row in results:
+        country = Country(row['name'], row['visited'], row['id'] )
+        countries_visited.append(country)
+    return countries_visited
+
+
+def see_to_visit_country():
+    countries_to_visit = []
+    sql = "SELECT * FROM countries WHERE visited = False"
+    results = run_sql(sql)
+
+    for row in results:
+        country = Country(row['name'], row['visited'], row['id'] )
+        countries_to_visit.append(country)
+    return countries_to_visit
+
+def update_visited_country(is_visited,id):
+    sql = "UPDATE countries SET visited = %s WHERE id = %s"
+    values = [is_visited,id]
+    run_sql(sql,values)
+    

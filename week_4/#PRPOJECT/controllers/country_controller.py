@@ -16,36 +16,21 @@ def countries():
     return render_template("countries/index.html", all_countries = countries)
 
 
-# ADD COUNTRY IS NOT NEEDED HERE??? because it needs more parameters eg (city)
-
-# #displays add country page
-# @countries_blueprint.route("/countries/new", methods=['GET'])
-# def new_city():
-#     cities = city_repository.select_all()
-#     return render_template("countries/new.html", all_cities = cities)
-
-# # SAVES NEW COUNTRY OBJECT
-# @countries_blueprint.route("/countries",  methods=['POST'])
-# def create_country():
-#     name   = request.form['name']
-#     visited   = request.form['visited'] 
-#     country = Country(name,visited)
-#     country_repository.save(country)
-#     return redirect('/cities')
-
 #display single country
 @countries_blueprint.route('/countries/<country_id>')
 def get_country(country_id):
     country = country_repository.select(country_id)
-    return render_template('countries/show.html', country=country)
+    cities = city_repository.select_all()
+    return render_template('countries/show.html', country=country,cities=cities)
 
-# display form to edit city
+# display form to edit country
 
 @countries_blueprint.route('/countries/<country_id>/edit')
 def edit_country(country_id):
     country = country_repository.select(country_id)
     cities = city_repository.select_all()
-    return render_template('countries/edit.html', all_cities=cities, country=country)
+    countries = country_repository.select_all()
+    return render_template('countries/edit.html', all_cities=cities, country=country,countries=countries)
 
 
 # saves update form (country)
@@ -64,15 +49,9 @@ def delete_country(id):
     country_repository.delete(int(id))
     return redirect('/countries')
 
-# display countries visited
-
-@countries_blueprint.route('/countries/visited')
-def see_visited():
-    countries = country_repository.see_visited()
-    return render_template("cities/visited.html", all_countries = countries)
 
 
-# display add country page
+# display add country page (coming from cities/add)
 
 @countries_blueprint.route('/countries/add/new')
 def display_add_new_country():
@@ -89,4 +68,45 @@ def add_new_country():
     
     return redirect('/cities/new')
 
+#####################################################
 
+# display add country page (coming from main page)
+
+@countries_blueprint.route('/countries/add/new/2')
+def display_add_new_country_main():
+    return render_template("countries/new_2.html")
+
+
+# add country using button on add city (from main page)
+
+@countries_blueprint.route('/countries/add/new/2', methods = ['POST'])
+def add_new_country_main():
+    name = request.form['country_name']
+    country = Country(name)
+    country_repository.add_country(country)
+    
+    return redirect('/countries')
+
+# display counitres visited
+
+@countries_blueprint.route('/countries/visited')
+def see_visited():
+    countries = country_repository.see_visited_country()
+    return render_template("countries/visited.html", all_countries = countries)
+
+# display countries still to visit
+    
+@countries_blueprint.route('/countries/to_visit')
+def see_to_visit():
+    countries = country_repository.see_to_visit_country()
+    return render_template("countries/to_visit.html", all_countries = countries)
+
+
+# mark country as visited
+
+@countries_blueprint.route('/countries/<country_id>/mark_visited', methods=['POST'])
+def mark_as_visited(country_id):
+    country_repository.update_visited_country(True,country_id)
+    
+    return redirect('/countries/to_visit')
+    

@@ -14,7 +14,7 @@
           <th>Delete?</th>
         </tr>
         <tr>
-          <td>{{country.name}}</td>
+          <td><a href="/countries/{{country.id}}">{{ country.name }}</a></td>
           <td> 
             {% if country.visited %}
                 <i class="fa fa-check fa-2x" style="color: green"></i>
