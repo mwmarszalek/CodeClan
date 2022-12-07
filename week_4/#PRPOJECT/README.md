@@ -6,6 +6,8 @@ Use main nav bar to see desired sections of the site.
 
 Use action buttons to add / remove / mark cities / countries.
 
+App created using python, psycogp2 (psql), html and css
+
 Please see below for project brief:
 ###################################################################################################################
 ## Travel Bucket List
