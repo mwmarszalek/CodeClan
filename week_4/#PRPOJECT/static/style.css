@@ -28,16 +28,11 @@ body {
     border-style: groove;
     border-color: rgb(255, 207, 155);
     border-width: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
 }
 
-/* header {
-    position:sticky;
-    top:0;
-    z-index:100;
-    transition: 0.2;
-} */
+
 
 .visited-wrapper {
     display:flex;

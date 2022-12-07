@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="to-visit-title">Add country:</h1>
-
+<link rel="stylesheet" href="{{ url_for('static', filename='alt_style.css') }}">
 <form action="/countries/add/new/2" method="post" class="form-new">
   <label for="name">Country Name:</label>
   <input
