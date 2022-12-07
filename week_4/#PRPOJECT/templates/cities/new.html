@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='alt_style.css') }}">
 <h1 class="add-city-title">Add New City:</h1>
 <form action="/cities" method="post" class="form-new">
   <label for="name">City Name:&nbsp</label>

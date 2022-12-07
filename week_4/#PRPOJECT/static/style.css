@@ -140,6 +140,8 @@ footer {
     font-family: 'Courier New', Courier, monospace;
     color:white;
     opacity:0.5;
+   
+    
 }
 
 
@@ -166,6 +168,7 @@ footer {
     align-items: center;
     gap:30px;
     font-size:25px;
+    
     
 }
 
