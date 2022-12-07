@@ -1,7 +1,7 @@
 import unittest
 from models.country import Country
 
-class TestTask(unittest.TestCase):
+class TestCountry(unittest.TestCase):
     
     def setUp(self):
         self.country = Country("Thailand",True)

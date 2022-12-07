@@ -1,7 +1,7 @@
 import unittest
 from models.city import City
 
-class TestTask(unittest.TestCase):
+class TestCity(unittest.TestCase):
     
     def setUp(self):
         self.city = City("Warsaw","Poland",True)
