@@ -1,7 +1,7 @@
 import unittest
  
-from tests.city_tests import TestTask
-from tests.country_tests import TestTask
+from tests.city_tests import *
+from tests.country_tests import *
  
  
 if __name__ == '__main__':
