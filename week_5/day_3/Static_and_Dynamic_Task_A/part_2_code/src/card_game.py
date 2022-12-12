@@ -8,22 +8,23 @@ class CardGame:
 
 
   def check_for_ace(self, card):
-    if card.value = 1:
+    if card.value == 1: # should be '=='
       return True
-    else
+    else: # should have ':' at the end
       return False
    
 
-  dif highest_card(self, card1 card2):
-  if card1.value > card2.value:
-    return card
-  else:
-    return card2
+  def highest_card(self, card1, card2): # should be 'def' # there is no ',' between parameters
+    if card1.value > card2.value: # no indentation in if statement
+      return card1.value #should be card1.value
+    else:
+      return card2.value #should be card2.value
   
 
 
-def cards_total(self, cards):
-  total
-  for card in cards:
-    total += card.value
-    return "You have a total of" + total
+  def cards_total(self, cards): #no identation
+    total = 0 # variable not assigned. should be total = 0
+    for card in cards:
+      total += card.value
+    return f'You have a total of {total}' #can only concatenate str! // no whitespace at the end of string
+  
