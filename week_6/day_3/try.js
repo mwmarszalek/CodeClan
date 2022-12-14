@@ -3,15 +3,15 @@
 // this should use forEach
 const myNumbers = [1,2,3,4];
 
-const getEvens = function (numbers) {
-    const evenNums = [];
 
-    numbers.forEach((number) => {
-        if (number % 2 === 0) {
-            evenNums.push(number)
-        }  
-    })
-    return evenNums;
+
+
+const sumElement = function(numbers) {
+    const total = numbers.reduce((runningTotal,number) => {
+        return runningTotal += number;
+    },0);
+
+    return total
 }
 
-console.log(getEvens(myNumbers));
+console.log(sumElement(myNumbers));
