@@ -31,9 +31,12 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
     return total += journey.distance;
   },0);
 };
-
+// the below is failing the test!
 Traveller.prototype.getUniqueModesOfTransport = function () {
-  
+  const uniqueModesOfTransport = this.journeys
+    .map((journey) => journey.transport);
+    const cleanModeOfTransport = new Set(uniqueModesOfTransport);
+      return cleanModeOfTransport
 };
 
 
