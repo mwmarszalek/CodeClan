@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import FilmsList from '../components/FilmsList';
 import LinkToIMDB from '../components/LinkToIMDB';
 import Title from '../components/Title';
+import AddFilmForm from '../components/AddFilmForm';
 
 
 const FullApp = () => {
@@ -33,13 +34,19 @@ const FullApp = () => {
         }
         ])
 
-        
+        const addFilm = (submittedFilm) => {
+            submittedFilm.id = films.id;
+            const updatedFilms = [...films,submittedFilm];
+            setFilms(updatedFilms);
+        }
 
     return (
         <div className="wrapper">
         <Title />
         <ul><FilmsList films={films}></FilmsList></ul>
         <LinkToIMDB />
+        {/* <AddFilmForm onFilmSubmit={(film) => addFilm(film)}/> */}
+
 
         </div>
     );

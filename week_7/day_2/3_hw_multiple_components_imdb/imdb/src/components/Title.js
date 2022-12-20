@@ -4,7 +4,10 @@ import React from 'react';
 
 const Title = () => {
     return (
-        <h1 className="title">Upcoming Film Releases for UK</h1>
+        <div id="title-and-hr">
+            <p className="title">Upcoming Film Releases for UK</p>
+            <hr></hr>
+        </div>
     )
 };
 

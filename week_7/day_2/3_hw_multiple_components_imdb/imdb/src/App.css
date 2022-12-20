@@ -41,25 +41,72 @@
 .wrapper {
   display:flex;
   flex-direction: column;
-  border: solid 5px;
+  border: solid 2px;
   width: 50rem;
+  margin:50px
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 40px;
+  margin-bottom:15px;
+  margin-top:10px;
+  font-weight:450;
+
+}
+
+#title-and-hr {
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 
-.films-list {
+
+.single-film {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-left:30px;
+  font-size: 30px;
+  
+}
+
+li {
+  font-size: 25px;
+  margin-left:30px;
+  font-weight: 450;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: rgb(0, 106, 255);
+  
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .link-imdb {
   display:flex;
   justify-content: center;
+  border: solid 2px black;
+  font-size: 35px;
+  padding: 30px;
+  background-color: rgb(45, 182, 209);
+  margin-bottom:20px;
+  margin-top:20px;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  border: solid 5px;
+#imdb-link-wrapper {
+  margin-right: 20px;
+  margin-left:20px;
 }
+
+
+
+
 
