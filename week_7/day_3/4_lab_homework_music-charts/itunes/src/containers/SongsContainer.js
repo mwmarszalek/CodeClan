@@ -18,6 +18,7 @@ const getSongs = function() {
     .then(songs => setSongs(songs.feed.entry))
 }
 
+// setSongs(songs.feed.entry))
 
 
 
@@ -28,8 +29,6 @@ return (
 )
 
 }
-
-
 
 
 

@@ -3,8 +3,8 @@ import SongsContainer from './containers/SongsContainer';
 
 function App() {
   return (
-    <div>
-      <h1>UK charts</h1>
+    <div className='body'>
+      <h1 id="title">UK CHARTS 2022</h1>
       <SongsContainer />
     </div>
   );

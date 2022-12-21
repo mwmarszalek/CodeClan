@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+html {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: linear-gradient(to right,brown,rgba(255, 200, 0, 0.78));
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size: 30px;
+  gap:20px;
+  width:350px;
+  border: 5px groove;
+  border-radius: 10%;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  
+  margin-bottom: 50px;
+  padding:30px;
+  
+
+}
+
+#charts-wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#number {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  border:3px solid;
+  text-align: center;
 }
