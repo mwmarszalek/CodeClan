@@ -4,7 +4,7 @@ import SongList from '../components/SongList';
 
 const SongsContainer = () => {
     const [songs,setSongs] = useState([]);
-    const [selectedSong,setSelectedSong] = useState(null);
+    
 
 
 useEffect(() => {
@@ -17,10 +17,6 @@ const getSongs = function() {
     .then(res => res.json())
     .then(songs => setSongs(songs.feed.entry))
 }
-
-// setSongs(songs.feed.entry))
-
-
 
 return (
     <div>

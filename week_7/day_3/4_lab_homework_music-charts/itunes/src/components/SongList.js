@@ -4,7 +4,7 @@ const SongList = ({songs,index}) => {
 
     const SongItems = songs.map((song, index) => {
         return <ListItem song={song} key={index} index={index}/>
-        // <li>{index+1} {song.title.label}</li>
+        
     })
 
     return (
