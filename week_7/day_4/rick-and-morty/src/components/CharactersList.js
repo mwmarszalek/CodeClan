@@ -1,16 +1,13 @@
 import CharacterItem from "./CharacterItem"
 
 
-const CharactersList = ({characters,locations,episodes}) => {
+const CharactersList = (props) => {
 
-    const characterItems = characters.map((character,index) => {
-        return <CharacterItem character={character} key={index}/>
+    const characterItems = props.characters.map((character,index) => {
+        return <ul key={index}><CharacterItem character={character} key={index}/></ul>
     })
 
-    const filteredHuman = characters.filter((character) => {
-        return character.species === 'Human'
-    })
-
+   
 
     return (
         <div>
@@ -24,4 +21,3 @@ const CharactersList = ({characters,locations,episodes}) => {
 export default CharactersList;
 
 
-//create a dropdown list and have each (value) from dropdown (human alien unknonwn) to be passed in into filter function

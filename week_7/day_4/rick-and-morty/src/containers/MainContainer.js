@@ -1,41 +1,41 @@
 import React, { useState,useEffect } from 'react'
 import CharactersList from '../components/CharactersList';
-import SpeciesSelector from '../components/SpeciesSelector';
+import AddCharacterForm from '../components/AddCharacterForm';
 
 
 const MainContainer = () => {
     const [characters,setCharacters] = useState([]);
-    const [species,setSpecies] = useState([]);
     const [selectedCharacter,setSelectedCharacter] = useState(null);
-    const [selectedSpecies,setSelectedSpecies] = useState(null);
 
+    const [filteredSpecies,setFilteredSpecies] = useState('')
+
+  
     useEffect(() => {
-        getCharacters();
-        // getSpecies();
-    
+        getCharacters();    
     },[])
+
+    const saveSpeciesDataHandler = (enteredSpeciesData) => {
+        setFilteredSpecies(enteredSpeciesData)
+    }
 
     const getCharacters = function() {
         fetch('https://rickandmortyapi.com/api/character')
         .then(res => res.json())
         .then(characters => setCharacters(characters.results));
     }
+    
 
-    const getSpecies = function() {
-        fetch('https://rickandmortyapi.com/api/character')
-        .then(res => res.json())
-        .then(characters=> setSpecies(characters.species));
+    const AddCharacter = (submittedCharacter) => {
+        const updatedCharacters = [...characters,submittedCharacter];
+        setCharacters(updatedCharacters)
     }
-    const onSpeciesSelected = function(species) {
-        setSelectedSpecies(species);
-    }
+
 
 
     return(
         <div>
             <CharactersList characters={characters} />
-            <SpeciesSelector onSpeciesSelected={onSpeciesSelected} characters={characters}/>
-            
+            <AddCharacterForm onCharacterCubmit={(character) => AddCharacter(character)}/>
         </div>
     )
 };
