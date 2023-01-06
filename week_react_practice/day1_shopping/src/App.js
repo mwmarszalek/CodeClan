@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import './App.css';
+import MainContainer from './containers/MainContainer';
 
-const DUMMY_TASKS = [
-  {name:"Buy shopping", priority: 'low'}, 
-  {name:"Clean bathroom", priority: 'high'}, 
-  {name:"Car's MOT", priority: 'low'}
-]
+
 
 function App() {
 
+  
 
   return (
-    <div></div>
+    <MainContainer />
   )
 
 
