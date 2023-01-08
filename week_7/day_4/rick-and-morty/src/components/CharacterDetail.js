@@ -5,7 +5,6 @@ const CharacterDetail = ({character}) => {
     return (
       <div className="character-detail">
         <ul>
-        <li>Name: {character.name} </li>
         <li>Status: {character.status}</li>
         <li> Species: {character.species}</li>
         <li>Gender: {character.gender}</li>
@@ -16,4 +15,4 @@ const CharacterDetail = ({character}) => {
     )
 }
   
-  export default CharacterDetail;
+  export default CharacterDetail;ł
