@@ -1,18 +1,13 @@
-import React, { useState } from 'react'
-import './App.css';
-import MainContainer from './containers/MainContainer';
-
-
+import React from 'react';
+import CountriesContainer from './containers/CountriesContainer';
 
 function App() {
-
-  
-
   return (
-    <MainContainer />
-  )
-
-
+    <div className="App">
+      <h1>Countries of the World</h1>
+      <CountriesContainer />
+    </div>
+  );
 }
 
 export default App;
