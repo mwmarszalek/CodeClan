@@ -15,4 +15,4 @@ const CharacterDetail = ({character}) => {
     )
 }
   
-  export default CharacterDetail;ł
+  export default CharacterDetail;
