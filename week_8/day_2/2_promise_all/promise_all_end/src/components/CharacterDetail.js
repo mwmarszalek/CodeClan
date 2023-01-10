@@ -1,8 +1,8 @@
 import react from 'react';
+import EpisodeList from './EpisodeList'
 import './CharacterDetail.css'
-import EpisodeList from './EpisodeList';
 
-const CharacterDetail = ({character,episodes}) => {
+const CharacterDetail = ({character, episodes}) => {
   return (
     <div  id="characterDetail">
     <div id="detailWrapper">
@@ -20,7 +20,7 @@ const CharacterDetail = ({character,episodes}) => {
     </div>
 
     <div id="episode-list-wrapper">
-      <EpisodeList episodes={episodes} />
+      <EpisodeList episodes={episodes} ></EpisodeList>
     </div>
   </div>
   )
