@@ -24,7 +24,7 @@ const MainContainer = () => {
             return fetch('https://hacker-news.firebaseio.com/v0/item/'+ articleID +'.json')
             .then(res => res.json())
         })
-
+    
 
         Promise.all(articleIdPromises)
             .then((data) => {
