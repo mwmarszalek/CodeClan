@@ -2,9 +2,14 @@ import { useState } from "react";
 
 const Basket = ({ basket }) => {
 
+    const [updatedBasket,setUpdatedBasket] = useState(basket)
+
+    
+
     const basketItems = basket.map((basketItem, index) => {
-        return <li key={index}>{basketItem.name}</li>
+        return <li key={index}>{basketItem.name} <button>Remove from basket</button></li>
     })
+
 
 
     return (

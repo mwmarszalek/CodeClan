@@ -1,32 +1,38 @@
 import { useState } from "react";
 import SingleItem from "./SingleItem";
 
-const ShopItems = ({ items,addToBasket2 }) => {
+const ShopItems = ({ items, addToBasket2 }) => {
 
 
-    const [temp_basket,setTempBasket] = useState([])
+    const [temp_basket, setTempBasket] = useState([])
 
-    const addToBasket = (item )=> {
+    const addToBasket = (item) => {
         // setBasket(item)
-        const newBasket = [...temp_basket,item]
+        const newBasket = [...temp_basket, item]
         setTempBasket(newBasket)
-        addToBasket2(newBasket)  
+        addToBasket2(newBasket)
     }
 
     const basketList = temp_basket.map((basket_item) => {
         return basket_item
     })
 
-    console.log(basketList);
 
-    const listItems = items.map((item,index) => {
+    const listItems = items.map((item, index) => {
         return <SingleItem key={index} item={item} addToBasket={addToBasket} />
     })
 
+    const itemsInBasket = temp_basket.length
+
+    
     return (
-        <ul>
-            {listItems}
-        </ul>
+        <div>
+            <h1>Items to buy:</h1>
+            <ul>
+                {listItems}
+            </ul>
+            <h2>Items currently in basket: {itemsInBasket}</h2>
+        </div>
     )
 };
 
