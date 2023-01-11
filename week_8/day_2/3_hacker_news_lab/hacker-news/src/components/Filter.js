@@ -15,9 +15,11 @@ const Filter = ({handleFilterInput}) => {
     }
 
     return (
-        <input value={userInput} type='text' onChange={handleUserInput}/>
+        <input placeholder='Enter text to filter by'value={userInput} type='text' onChange={handleUserInput}/>
     )
 }
 
 
 export default Filter;
+
+

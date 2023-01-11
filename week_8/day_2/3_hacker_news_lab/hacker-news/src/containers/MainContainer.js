@@ -1,30 +1,31 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Filter from '../components/Filter';
+
+
 
 const MainContainer = () => {
 
-    const [articleIDs,setArticleIDs] = useState([])
-    const [articleTitles,setArticleTitles] = useState([])
-    const [allTitles,setAllTitles] = useState([])
-    
+    const [articleIDs, setArticleIDs] = useState([])
+    const [articleTitles, setArticleTitles] = useState([])
+    const [allTitles, setAllTitles] = useState([])
 
 
-    useEffect( () => {
+
+    useEffect(() => {
         fetch('https://hacker-news.firebaseio.com/v0/topstories.json ')
-        .then ( results => results.json() )
-        .then( data => setArticleIDs(data))
-        
-    }, [] )
+            .then(results => results.json())
+            .then(data => setArticleIDs(data))
 
-    
+    }, [])
 
-    useEffect( () => {
 
-        const articleIdPromises = articleIDs.slice(0,21).map((articleID,index) => {
-            return fetch('https://hacker-news.firebaseio.com/v0/item/'+ articleID +'.json')
-            .then(res => res.json())
+
+    useEffect(() => {
+
+        const articleIdPromises = articleIDs.slice(0, 21).map(articleID => {
+            return fetch('https://hacker-news.firebaseio.com/v0/item/' + articleID + '.json')
+                .then(res => res.json())
         })
-    
 
         Promise.all(articleIdPromises)
             .then((data) => {
@@ -32,20 +33,18 @@ const MainContainer = () => {
                 setAllTitles(data)
             })
 
-            
-    }, [articleIDs] ) 
+    }, [articleIDs])
 
-    const listTitles = articleTitles.map((article,index) => {
+    const listTitles = articleTitles.map((article, index) => {
         return <li key={index}>
-            <h3>{article.title}</h3>
+            <h3><a href={article.url}>{article.title}</a></h3>
             <p>Posted by {article.by}</p>
-            </li>
+        </li>
     })
 
     const handleFilterInput = (input) => {
-        console.log(input);
         const filteredList = allTitles.filter(article => {
-           return  article.title.includes(input)            
+            return article.title.toLowerCase().includes(input.toLowerCase())
         })
         setArticleTitles(filteredList)
     }
@@ -53,7 +52,7 @@ const MainContainer = () => {
     return (
         <>
             <Filter handleFilterInput={handleFilterInput} />
-           <ul>{listTitles}</ul>
+            <ul>{listTitles}</ul>
         </>
     )
 };
