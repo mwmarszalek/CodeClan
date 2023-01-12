@@ -23,11 +23,17 @@ const MainContainer = props => {
 
     const [items,setItems] = useState(DUMMY_DATA);
     const [basket,setBasket] = useState([])
+    const [userInput,setUserInput] = useState('')
 
+
+    //callback function to move data from grandchild component to main cotainer
     const addToBasket2 = (basket)=> {
         setBasket(basket)
     }
     
+    const saveUserInput = (userInput) => {
+        setUserInput(userInput)
+    }
 
     return (
         <Router>
@@ -36,6 +42,7 @@ const MainContainer = props => {
                 <Route exact path="/" element={<Home />}/>
                 <Route path="/items" element={<ShopItems items={items} addToBasket2={addToBasket2} />}/>
                 <Route path="/basket" element={<Basket basket={basket}/>}/>
+                <Route path="/contact" element={<Contact moveDataUp={saveUserInput} />}/>
             </Routes>
         </Router>
     )
