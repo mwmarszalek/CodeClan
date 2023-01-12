@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const NavBar = props => {
+const NavBar = ({basket}) => {
     return (
         <ul>
             <li>
@@ -10,7 +10,7 @@ const NavBar = props => {
                 <Link to="/items">Items</Link>
             </li>
             <li>
-                <Link to="/basket">Basket</Link>
+                <Link to="/basket">Basket ({basket.length})</Link>
             </li>
             <li>
                 <Link to="/contact">Contact Us</Link>

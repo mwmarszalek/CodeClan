@@ -31,19 +31,12 @@ const MainContainer = props => {
 
     return (
         <Router>
-            <NavBar />
+            <NavBar basket={basket} />
             <Routes>
                 <Route exact path="/" element={<Home />}/>
                 <Route path="/items" element={<ShopItems items={items} addToBasket2={addToBasket2} />}/>
                 <Route path="/basket" element={<Basket basket={basket}/>}/>
             </Routes>
-
-
-
-
-
-
-
         </Router>
     )
 }

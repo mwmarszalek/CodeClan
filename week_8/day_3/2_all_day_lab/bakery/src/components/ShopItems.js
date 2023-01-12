@@ -7,7 +7,6 @@ const ShopItems = ({ items, addToBasket2 }) => {
     const [temp_basket, setTempBasket] = useState([])
 
     const addToBasket = (item) => {
-        // setBasket(item)
         const newBasket = [...temp_basket, item]
         setTempBasket(newBasket)
         addToBasket2(newBasket)
@@ -19,7 +18,7 @@ const ShopItems = ({ items, addToBasket2 }) => {
 
 
     const listItems = items.map((item, index) => {
-        return <SingleItem key={index} item={item} addToBasket={addToBasket} />
+        return <SingleItem key={index} item={item} addToBasket={addToBasket}  />
     })
 
     const itemsInBasket = temp_basket.length
@@ -31,7 +30,6 @@ const ShopItems = ({ items, addToBasket2 }) => {
             <ul>
                 {listItems}
             </ul>
-            <h2>Items currently in basket: {itemsInBasket}</h2>
         </div>
     )
 };
