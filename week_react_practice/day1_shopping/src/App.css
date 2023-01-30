@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+body {
+  background-image:url('../public/honeycomb3.jpeg');
+  font-family: 'Unbounded', cursive;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 40px;
+  
+}
+
+.nav-bar {
+  display: flex;
+  gap:30px;
+  list-style-type: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+#logo-text {
+  width: 100px;
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  opacity: 0.8;
+  font-size: 30px;
+  margin-top:20px;
 }
