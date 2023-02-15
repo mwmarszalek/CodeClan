@@ -9,8 +9,11 @@ public class Printer {
     }
 
     public int print(int pages,int copies) {
-        if (this.sheetsLeft >= pages * copies) {
-            this.sheetsLeft -= (pages * copies);
+
+        int pagesToPrint = pages * copies;
+
+        if (this.sheetsLeft >= pagesToPrint) {
+            this.sheetsLeft -= (pagesToPrint);
             this.tonerVolume -= pages;
             return this.sheetsLeft;
         } else {
