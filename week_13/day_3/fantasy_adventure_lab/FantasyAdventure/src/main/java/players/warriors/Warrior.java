@@ -2,12 +2,13 @@ package players.warriors;
 
 import behaviours.IChange;
 import behaviours.IFight;
+import behaviours.IGetDamage;
 import players.Player;
 import players.magicPeople.MagicPerson;
 import players.magicPeople.SpellType;
 import players.magicPeople.Wizard;
 
-public abstract class Warrior extends Player implements IFight, IChange {
+public abstract class Warrior extends Player implements IFight, IChange, IGetDamage {
 
     private WeaponType weaponType;
     private Player player;
@@ -45,6 +46,10 @@ public abstract class Warrior extends Player implements IFight, IChange {
 
     public void changeAttack(WeaponType weaponType) {
         setWeaponType(weaponType);
+    }
+
+    public void getDamageValue() {
+        this.getWeaponType().getDamage();
     }
 
 

@@ -2,10 +2,11 @@ package players.magicPeople;
 
 import behaviours.IChange;
 import behaviours.IFight;
+import behaviours.IGetDamage;
 import players.Player;
 import players.warriors.Warrior;
 
-public abstract class MagicPerson extends Player implements IFight, IChange {
+public abstract class MagicPerson extends Player implements IFight, IChange, IGetDamage {
 
 
     private SpellType spellType;
@@ -49,6 +50,10 @@ public abstract class MagicPerson extends Player implements IFight, IChange {
 
     public void changeAttack(SpellType spellType) {
         setSpellType(spellType);
+    }
+
+    public void getDamageValue() {
+        this.spellType.getDamage();
     }
 
 }

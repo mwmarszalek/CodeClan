@@ -37,7 +37,7 @@ public class Room {
 
 
     public void killEnemy(Player player) {
-        //if player is warrior
+
         if (player instanceof Warrior) {
         Warrior warrior = (Warrior) player;
         while (enemy.getHealthBar() > 0) {
@@ -50,6 +50,7 @@ public class Room {
         int treasure = getTreasureType().getValue();
         int outcome = inventory + treasure;
         player.setInventory(outcome);
+
         } else {
             MagicPerson magicPerson = (MagicPerson) player;
             while (enemy.getHealthBar() > 0) {
